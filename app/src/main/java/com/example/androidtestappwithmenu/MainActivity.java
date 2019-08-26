@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,9 +47,25 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+   /*     if (id == R.id.action_settings) {
+            //return true;
+            Toast.makeText(MainActivity.this,getString(R.string.action_settings), Toast.LENGTH_LONG).show();
+        } else if (id == R.id.action_item1) {
+            //return true;
+            Toast.makeText(MainActivity.this,getString(R.string.action_item1), Toast.LENGTH_LONG).show();
+        }else if (id == R.id.action_item2) {
+            //return true;
+            Toast.makeText(MainActivity.this,getString(R.string.action_item2), Toast.LENGTH_LONG).show();
+        }else if (id == R.id.action_item3) {
+            //return true;
+            Toast.makeText(MainActivity.this,getString(R.string.action_item3), Toast.LENGTH_LONG).show();
+        }*/
+   switch (id){
+       case R.id.action_settings: Toast.makeText(MainActivity.this,getString(R.string.action_settings), Toast.LENGTH_LONG).show(); break;
+       case R.id.action_item1: Toast.makeText(MainActivity.this,getString(R.string.action_item1), Toast.LENGTH_LONG).show(); break;
+       case R.id.action_item2: Toast.makeText(MainActivity.this,getString(R.string.action_item2), Toast.LENGTH_LONG).show(); break;
+       case R.id.action_item3: Toast.makeText(MainActivity.this,getString(R.string.action_item3), Toast.LENGTH_LONG).show(); break;
+   }
 
         return super.onOptionsItemSelected(item);
     }
